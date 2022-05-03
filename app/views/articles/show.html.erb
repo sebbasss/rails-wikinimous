@@ -1,0 +1,15 @@
+<%require 'faker'%>
+<h1><%= @article.title%></h1>
+
+<p><%=@article.content%></p>
+
+<h2><%= Faker::Science.tool%></h2>
+
+<p><%=Faker::Lorem.sentence(word_count: 25)%></p>
+
+<h2><%= Faker::Science.tool%></h2>
+
+<p><%=Faker::Lorem.sentence(word_count: 25)%></p>
+
+<%= link_to "edit article", edit_path%>
+<%= link_to "delete article", destroy_path(@article), method: :delete, data: { confirm: "Are you sure?" }%>
